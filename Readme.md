@@ -132,3 +132,4 @@ Config.BossMenuZones = {
 Gerekli Script:
 
 - [qb-target](https://github.com/qbcore-framework/qb-target)
+- [qb-management](https://github.com/qbcore-framework/qb-management)
