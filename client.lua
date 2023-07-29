@@ -24,42 +24,32 @@ end)
 
 RegisterNetEvent("atomik_gunshop:tezgah_gunshop1")
 AddEventHandler("atomik_gunshop:tezgah_gunshop1", function()
-	for k,v in ipairs(Config.Locations )do
-		TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop1")
-		TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop1")
-	end
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop1")
+	TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop1")
 end)
 
 RegisterNetEvent("atomik_gunshop:tezgah_gunshop2")
 AddEventHandler("atomik_gunshop:tezgah_gunshop2", function()
-	for k,v in ipairs(Config.Locations )do
-		TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop2")
-		TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop2")
-	end
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop2")
+	TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop2")
 end)
 
 RegisterNetEvent("atomik_gunshop:tezgah_gunshop3")
 AddEventHandler("atomik_gunshop:tezgah_gunshop3", function()
-	for k,v in ipairs(Config.Locations )do
-		TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop3")
-		TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop3")
-	end
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop3")
+	TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop3")
 end)
 
 RegisterNetEvent("atomik_gunshop:tezgah_gunshop4")
 AddEventHandler("atomik_gunshop:tezgah_gunshop4", function()
-	for k,v in ipairs(Config.Locations )do
-		TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop4")
-		TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop4")
-	end
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop4")
+	TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop4")
 end)
 
 RegisterNetEvent("atomik_gunshop:tezgah_gunshop5")
 AddEventHandler("atomik_gunshop:tezgah_gunshop5", function()
-	for k,v in ipairs(Config.Locations )do
-		TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop5")
-		TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop5")
-	end
+	TriggerServerEvent("inventory:server:OpenInventory", "stash", "tezgah_gunshop5")
+	TriggerEvent("inventory:client:SetCurrentStash", "tezgah_gunshop5")
 end)
 
 RegisterNetEvent("atomik_gunshop:depo")
@@ -67,7 +57,10 @@ AddEventHandler("atomik_gunshop:depo", function(playerId)
 	for k,v in ipairs(Config.Locations)do
 		local player = QBCore.Functions.GetPlayerData()
 		local meslek = player.job.name
-		TriggerServerEvent("inventory:server:OpenInventory", "stash", "depo_".. meslek)
+		TriggerServerEvent("inventory:server:OpenInventory", "stash", "depo_".. meslek, {
+			maxweight = 4000000,
+			slots = 300,
+		})
 		TriggerEvent("inventory:client:SetCurrentStash", "depo_".. meslek)
 	end
 end)
